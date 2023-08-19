@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Fever</title>
+    <link rel="icon" type="png" href="icon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #800000;   
+        }
+
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-list li {
+            padding: 20px;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .nav-list li a:hover {
+            color: #ff9900;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .tiles-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .tile {
+            background-color: #f0e68c;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .tile:hover {
+            transform: scale(1.05);
+        }
+
+        .content {
+            width: 60%;
+            padding: 20px;
+        }
+
+        .image {
+            width: 40%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .text-section {
+            width: 50%;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff; /* Adjust the background color as needed */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+        }
+        @media screen and (max-width: 1200px) {
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tiles-container, .text-section, .image {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-list li {
+                padding: 10px;
+            }
+            .main-content {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+            .text-section {
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-list li {
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <div class="tiles-container">
+            <div class="tile" onclick="goToPage('menu.html')">
+                <h2>Menu</h2>
+                <p>Discover our delicious dishes</p>
+            </div>
+            <div class="tile" onclick="goToPage('special.html')">
+                <h2>Specials</h2>
+                <p>Check out our daily specials</p>
+            </div>
+        </div>
+        <div class="text-section">
+            <a href="https://play.google.com/store/apps/details?id=com.nordcurrent.canteenhd&pcampaignid=web_share" class="link-button">Click the link</a> <!-- Add this line -->
+            <h2>Explore Our Culinary Delights</h2>
+            <p>"Are you a dish in Cooking Fever? Because you've got me burning with excitement to taste what you're serving up!"</p>
+        </div>
+        <aside class="image">
+            <img src="girl.png" alt="Standing Girl">
+        </aside>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 Cooking Fever. All rights reserved.</p>
+    </footer>
+     <script>
+        function goToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+    
+</body>
+</html>
+
